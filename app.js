@@ -22,3 +22,28 @@ var config = {
 
     $("#trainTable > tbody").append("<tr><td>" + name + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + next + "</td><td>" + min + "</td></tr>");
 });
+$("#addTrainBtn").on("click", function() {
+
+    var trainName = $("#train-input").val().trim();
+    var destination = $("#Destination-input").val().trim();
+    var firstTrain = $("#firstInput").val().trim();
+    var frequency = $("#Frequency-inpu").val().trim();
+
+    //ensures that each input has a value
+    if (trainName == "") {
+        alert('Enter a train name.');
+        return false;
+    }
+    if (destination == "") {
+        alert('Enter a destination.');
+        return false;
+    }
+    if (firstTrain == "") {
+        alert('Enter a first train time.');
+        return false;
+    }
+    if (frequency == "") {
+        alert('Enter a frequency');
+        return false;
+    }
+});
